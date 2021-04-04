@@ -16,6 +16,11 @@ from sqlalchemy import create_engine
 
 
 # Crawling for C_DAYS
+#C_DAYS = 2
+#end = datetime.datetime.now().date()
+#start = end - datetime.timedelta(days=C_DAYS)
+
+# Crawling for C_DAYS
 C_DAYS = 1000
 end = datetime.datetime.now().date()
 start = end

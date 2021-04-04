@@ -18,14 +18,14 @@ SELECT
     company
 FROM(
 SELECT
-   (select close from stock where company = a.company and date = '2020-07-28' ) as one,
-   (select close from stock where company = a.company and date = '2020-07-27' ) as two,
-   (select close from stock where company = a.company and date = '2020-07-24' ) as three,
-   (select close from stock where company = a.company and date = '2020-07-23' ) as four,
-   (select close from stock where company = a.company and date = '2020-07-22' ) as five,
+   (select close from stock where company = a.company and date = '2020-07-31' ) as one,
+   (select close from stock where company = a.company and date = '2020-07-30' ) as two,
+   (select close from stock where company = a.company and date = '2020-07-29' ) as three,
+   (select close from stock where company = a.company and date = '2020-07-28' ) as four,
+   (select close from stock where company = a.company and date = '2020-07-27' ) as five,
    a.company
 FROM
-    (SELECT DISTINCT company FROM stock) a 
+    KOSPI_LIST a 
 ) a
 WHERE a.five  > a.four  
 and   a.four  > a.three 
